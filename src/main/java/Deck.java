@@ -2,9 +2,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-    private ArrayList<Card> cards = new ArrayList<Card>();
+    private static ArrayList<Card> cards;
 
     public Deck() {
+        cards = new ArrayList<Card>();
         String[] suits = {"Hearts", "Spades", "Diamonds", "Clubs"};
         String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
 
@@ -16,7 +17,7 @@ public class Deck {
         }
     }
 
-    public void shuffleDeck() {
+    public static void shuffleDeck() {
         Collections.shuffle(cards);
     }
 
