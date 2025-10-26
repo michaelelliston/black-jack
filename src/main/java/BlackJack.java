@@ -29,9 +29,16 @@ public class BlackJack {
             playerTwo.deal(card);
         }
 
-        int handOneValue = playerOne.getHandValue();
-        int handTwoValue = playerTwo.getHandValue();
-        System.out.println(playerOne.getHandOwner() + "'s hand is worth: " + handOneValue);
-        System.out.println(playerTwo.getHandOwner() + "'s hand is worth: " + handTwoValue);
+
+        System.out.println(playerOne.getHandOwner() + "'s hand is worth: " + playerOne.getHandValue());
+        System.out.println(playerTwo.getHandOwner() + "'s hand is worth: " + playerTwo.getHandValue());
+
+        Card card = deck.dealFromDeck();
+        playerOne.deal(card);
+        card = deck.dealFromDeck();
+        playerTwo.deal(card);
+
+        System.out.println("Now, " + playerOne.getHandOwner() + "'s hand is worth: " + playerOne.getHandValue());
+        System.out.println("Now, " + playerTwo.getHandOwner() + "'s hand is worth: " + playerTwo.getHandValue());
     }
 }
